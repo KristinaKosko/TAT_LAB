@@ -1,0 +1,11 @@
+/Users/kristinakosko/Desktop/TAT_LAB/Task1_1/Task1_1/obj/Debug/.NETFramework,Version=v4.5.2.AssemblyAttribute.cs
+/Users/kristinakosko/Desktop/TAT_LAB/Task1_1/Task1_1/bin/Debug/Task1_1.exe.config
+/Users/kristinakosko/Desktop/TAT_LAB/Task1_1/Task1_1/bin/Debug/Task1_1.exe.mdb
+/Users/kristinakosko/Desktop/TAT_LAB/Task1_1/Task1_1/bin/Debug/Task1_1.pdb
+/Users/kristinakosko/Desktop/TAT_LAB/Task1_1/Task1_1/bin/Debug/Task1_1.exe
+/Users/kristinakosko/Desktop/TAT_LAB/Task1_1/Task1_1/obj/Debug/Task1_1.exe
+/Users/kristinakosko/Desktop/TAT_LAB/Task1_1/Task1_1/obj/Debug/Task1_1.exe.mdb
+/Users/kristinakosko/Desktop/TAT_LAB/Task1_1/Task1_1/obj/Debug/Task1_1.pdb
+/Users/kristinakosko/Desktop/TAT_LAB/Task1_1/Task1_1/bin/Debug/nunit.framework.dll
+/Users/kristinakosko/Desktop/TAT_LAB/Task1_1/Task1_1/bin/Debug/WebDriver.dll
+/Users/kristinakosko/Desktop/TAT_LAB/Task1_1/Task1_1/bin/Debug/WebDriver.Support.dll

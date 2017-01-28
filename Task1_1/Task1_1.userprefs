@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{691E243B-0043-4164-8C2D-3A955A56C1D5}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Task1_1/WriterToFile.cs">
+    <Files>
+      <File FileName="Task1_1/Dictionary.cs" Line="7" Column="16" />
+      <File FileName="Task1_1/Queue.cs" Line="27" Column="24" />
+      <File FileName="Task1_1/Stack.cs" Line="29" Column="4" />
+      <File FileName="Task1_1/SortedSet.cs" Line="47" Column="5" />
+      <File FileName="Task1_1/SortedDictionary.cs" Line="2" Column="1" />
+      <File FileName="Task1_1/ATimeCounter.cs" Line="4" Column="36" />
+      <File FileName="Task1_1/ListTimeCounter.cs" Line="56" Column="2" />
+      <File FileName="Task1_1/LinkedListTimeCounter.cs" Line="57" Column="1" />
+      <File FileName="Task1_1/DictionaryTimeCounter.cs" Line="14" Column="4" />
+      <File FileName="Task1_1/QueueTimeCounter.cs" Line="26" Column="51" />
+      <File FileName="Task1_1/StackTimeCounter.cs" Line="33" Column="5" />
+      <File FileName="Task1_1/SortedDictionaryTimeCounter.cs" Line="57" Column="2" />
+      <File FileName="Task1_1/SortedSetTimeCounter.cs" Line="29" Column="68" />
+      <File FileName="Task1_1/CollectionsTester.cs" Line="39" Column="39" />
+      <File FileName="Task1_1/WriterToFile.cs" Line="6" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Task1__1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
