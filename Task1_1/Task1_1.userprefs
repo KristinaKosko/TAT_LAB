@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{691E243B-0043-4164-8C2D-3A955A56C1D5}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Task1_1/WriterToFile.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Task1_1/Program.cs">
     <Files>
       <File FileName="Task1_1/Dictionary.cs" Line="7" Column="16" />
       <File FileName="Task1_1/Queue.cs" Line="27" Column="24" />
@@ -14,8 +14,9 @@
       <File FileName="Task1_1/StackTimeCounter.cs" Line="33" Column="5" />
       <File FileName="Task1_1/SortedDictionaryTimeCounter.cs" Line="57" Column="2" />
       <File FileName="Task1_1/SortedSetTimeCounter.cs" Line="29" Column="68" />
-      <File FileName="Task1_1/CollectionsTester.cs" Line="39" Column="39" />
-      <File FileName="Task1_1/WriterToFile.cs" Line="6" Column="3" />
+      <File FileName="Task1_1/CollectionsTester.cs" Line="52" Column="1" />
+      <File FileName="Task1_1/WriterToFile.cs" Line="26" Column="1" />
+      <File FileName="Task1_1/Program.cs" Line="50" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
