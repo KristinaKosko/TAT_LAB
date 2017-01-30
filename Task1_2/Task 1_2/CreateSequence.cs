@@ -5,13 +5,9 @@ using System.Numerics;
 
 namespace Task_1_2
 {
-    public class FibonacciSequenceCreator
+    public static class FibonacciSequenceCreator
     {
         public const int DefaultSequenceLength = 200;
-
-        // public int SequenceLength { get; set; }
-
-        // public List<BigInteger> SequenceList { get; private set; }
         
         public static List<BigInteger> FibonacciSequence()
         {
@@ -32,23 +28,6 @@ namespace Task_1_2
             }
 
             return SequenceList;
-
-
-
         }
-        
-        // <summary> 
-        // Creates Fibanacci numbers sequence with specefied in constructor length 
-        // </summary> 
-       /* private void Initialise()
-        {
-            SequenceList.Add(0);
-            SequenceList.Add(1);
-
-            for (var i = 1; i < DefaultSequenceLength - 1; i++)
-            {
-                SequenceList.Add(SequenceList[i - 1] + SequenceList[i]);
-            }
-        }*/
     }
 }
