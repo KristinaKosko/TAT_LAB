@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{00CEF9BF-B742-43DF-B0AC-F5931D36DCA6}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HW2/ExcelParser.cs">
+    <Files>
+      <File FileName="HW2/ExcelParser.cs" Line="18" Column="7" />
+      <File FileName="HW2/WebDriver.cs" Line="20" Column="40" />
+      <File FileName="HW2/SubmenuItem.cs" Line="18" Column="1" />
+      <File FileName="HW2/NavigationItem.cs" Line="22" Column="1" />
+      <File FileName="HW2/Journal.cs" Line="18" Column="1" />
+      <File FileName="../../ClassLibrary1/HomePage.cs" Line="19" Column="10" />
+      <File FileName="HW2/JournalPage.cs" Line="16" Column="1" />
+      <File FileName="HW2/FillJournal.cs" Line="23" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.HW2 PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
