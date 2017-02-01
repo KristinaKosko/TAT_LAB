@@ -16,7 +16,7 @@ namespace HW2
 			{
 				if (driver == null)
 				{
-					driver = new ChromeDriver(TestData.DriverPath);
+					driver = new ChromeDriver(@"C:\Users\Krystsina_Kasko\Desktop\TAT_LAB-TestJournalFramework\TestFramework\HW2\bin\Debug");
 					driver.Manage().Window.Maximize();
 				}
 

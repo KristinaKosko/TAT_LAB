@@ -16,6 +16,7 @@ namespace HW2
 
 		public NavigationItem()
 		{
+            submenuItems = new List<SubmenuItem>();
 		}
 	}
 }

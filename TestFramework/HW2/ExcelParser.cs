@@ -3,66 +3,68 @@ using System.Collections.Generic;
 using Excel = Microsoft.Office.Interop.Excel;
 namespace HW2
 {
-	public static class ExcelParser
-	{
-		public static string path = "/Users/kristinakosko/Desktop/TAT_LAB/TestFramework/Responsive-Batch-4.xlsx";
-		public static Excel.Application excelApp;
-		public static Excel.Workbook wb;
-		public static Excel.Sheets worksheets;
-		public static List<string> namesOfJournals;
-		public static List<NavigationItem> navigationItems;
-		public static List<SubmenuItem> submenuItems;
-		public static int startRows = 2;
-		public static int startColumns = 1;
+    public class ExcelParser
+    {
+        public static string path = @"C:\Users\Krystsina_Kasko\Desktop\TAT_LAB-TestJournalFramework\TestFramework\Responsive-Batch-4.xlsx";
+        public static Excel.Application excelApp;
+        public static Excel.Workbook wb;
+        public static Excel.Sheets worksheets;
+        public static List<string> namesOfJournals;
+        public static List<NavigationItem> navigationItems = new List<NavigationItem>();
+        public static List<SubmenuItem> submenuItems = new List<SubmenuItem>();
+        public static int startRows = 2;
+        public static int startColumns = 1;
 
-		public static List<string> GetNamesOfJournals()
-		{
-			excelApp = new Excel.Application();
-			wb = excelApp.Workbooks.Open(path);
-			worksheets = wb.Worksheets;
-			namesOfJournals = new List<string>();
-			foreach (Excel.Worksheet worksheet in worksheets)
-			{
-				namesOfJournals.Add(worksheet.Name);
-			}
-			return namesOfJournals;
-		}
+        public static List<string> GetNamesOfJournals()
+        {
+            excelApp = new Excel.Application();
+            wb = excelApp.Workbooks.Open(path);
+            worksheets = wb.Worksheets;
+            namesOfJournals = new List<string>();
+            foreach (Excel.Worksheet worksheet in worksheets)
+            {
+                namesOfJournals.Add(worksheet.Name);
+            }
+            return namesOfJournals;
+        }
 
-		public static List<NavigationItem> GetNavigationItems(string nameOfJournal)
-		{
-			worksheets.Select(nameOfJournal);
-			Excel.Worksheet ws = (Microsoft.Office.Interop.Excel.Worksheet)wb.ActiveSheet; 
-			var range = ws.Cells[startRows, startColumns];
-			while (range != null)
-			{
-				for (int columns = startColumns; columns <= ws.Columns.Count; columns++)
-				{
-					var navigationItem = new NavigationItem();
-					navigationItem.name = ws.Cells[startRows, columns].ToString();
-					while (range != null)
-					{
-						for (int i = startRows + 1; i <= ws.Rows.Count; i++)
-						{
-							range = ws.Cells[i, startColumns];
-							GetSubmenuItems(i, ws);
-							/*var submenuItem = new SubmenuItem();
-							submenuItem.name = ws.Cells[i, startColumns].ToString();
-							submenuItems.Add(submenuItem);*/
-						}
-					}
-					navigationItem.submenuItems = submenuItems;
-					navigationItems.Add(navigationItem);
-				}
-			}
-			return navigationItems;
-		}
+        public static List<NavigationItem> GetNavigationItems(string nameOfJournal)
+        {
+            Excel.Worksheet ws = (Microsoft.Office.Interop.Excel.Worksheet)wb.Worksheets[nameOfJournal];
+            for (int columns = startColumns; columns <= ws.Columns.Count; columns++)
+            {
+                var navigationItem = new NavigationItem();
+                navigationItem.name = GetValue(startRows, columns, ws);
+                if (navigationItem.name != "")
+                {
+                    for (int i = startRows + 1; i <= ws.Rows.Count; i++)
+                    {
+                        SubmenuItem submenuItem = new SubmenuItem();
+                        submenuItem.name = GetValue(i, columns, ws);
+                        if (submenuItem.name != "")
+                        {
+                            navigationItem.submenuItems.Add(submenuItem);
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                    navigationItems.Add(navigationItem);
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return navigationItems;
+        }
 
-		public static List<SubmenuItem> GetSubmenuItems(int row, Excel.Worksheet ws)
-		{
-			var submenuItem = new SubmenuItem();
-			submenuItem.name = ws.Cells[row, startColumns].ToString();
-			submenuItems.Add(submenuItem);
-			return submenuItems;
-		}
-	}
+        public static string GetValue(int row, int col, Excel.Worksheet ws)
+        {
+            Excel.Range cell = (Excel.Range)ws.Cells[row, col];
+            return Convert.ToString(cell.Value);
+
+        }
+    }
 }
