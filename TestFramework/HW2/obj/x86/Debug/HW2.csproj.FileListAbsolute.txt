@@ -13,3 +13,5 @@ C:\Users\Krystsina_Kasko\Desktop\TAT_LAB-TestJournalFramework\TestFramework\HW2\
 C:\Users\Krystsina_Kasko\Desktop\TAT_LAB-TestJournalFramework\TestFramework\HW2\bin\Debug\nunit.framework.xml
 C:\Users\Krystsina_Kasko\Desktop\TAT_LAB-TestJournalFramework\TestFramework\HW2\obj\x86\Debug\HW2.exe
 C:\Users\Krystsina_Kasko\Desktop\TAT_LAB-TestJournalFramework\TestFramework\HW2\obj\x86\Debug\HW2.pdb
+C:\Users\Krystsina_Kasko\Desktop\TAT_LAB-TestJournalFramework\TestFramework\HW2\bin\Debug\HW2.exe.config
+C:\Users\Krystsina_Kasko\Desktop\TAT_LAB-TestJournalFramework\TestFramework\HW2\obj\x86\Debug\HW2.TestData.resources

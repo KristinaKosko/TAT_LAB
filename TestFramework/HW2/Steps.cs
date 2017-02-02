@@ -14,7 +14,7 @@ namespace HW2
 
         public static void OpenJournal(string nameOfJournal)
         {
-            driver.Navigate().GoToUrl("http://journals.lww.com/" + nameOfJournal);
+            driver.Navigate().GoToUrl($"http://journals.lww.com/{nameOfJournal}");
         }
 
         public static bool CheckItems(NavigationItem item)

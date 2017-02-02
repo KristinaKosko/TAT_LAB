@@ -1,5 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
+using System.Diagnostics;
 using System.Collections.Generic;
 
 namespace HW2
@@ -14,17 +15,21 @@ namespace HW2
 		{
             Steps.OpenJournal(journal);
             List<NavigationItem> naviItems = ExcelParser.GetNavigationItems(journal);
+            ExcelParser.ExcelKill();
             foreach (var naviItem in naviItems)
             {
                 Assert.True(Steps.CheckItems(naviItem));
             }
-            
 		}
 
         [OneTimeTearDown]
         public void EndTest()
         {
             Steps.End();
+            //foreach (var p in Process.GetProcessesByName("Excel"))
+              //  p.Kill();
+           // foreach (var p in Process.GetProcessesByName("ChromeDriver"))
+             //   p.Kill();
         }
 	}
 }

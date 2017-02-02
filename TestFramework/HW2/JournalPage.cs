@@ -23,7 +23,7 @@ namespace HW2
             {
                // WebDriver.TakeScreenshot(categoryName);
             }
-            return null;
+             return null;
         }
 
         public IWebElement TryGetItem(string itemName)

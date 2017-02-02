@@ -5,15 +5,15 @@ namespace HW2
 {
     public class ExcelParser
     {
-        public static string path = @"C:\Users\Krystsina_Kasko\Desktop\TAT_LAB-TestJournalFramework\TestFramework\Responsive-Batch-4.xlsx";
-        public static Excel.Application excelApp;
-        public static Excel.Workbook wb;
-        public static Excel.Sheets worksheets;
-        public static List<string> namesOfJournals;
-        public static List<NavigationItem> navigationItems = new List<NavigationItem>();
-        public static List<SubmenuItem> submenuItems = new List<SubmenuItem>();
-        public static int startRows = 2;
-        public static int startColumns = 1;
+        private static Excel.Application excelApp;
+        private static Excel.Workbook wb;
+        private static Excel.Sheets worksheets;
+        private static List<string> namesOfJournals;
+        private static List<NavigationItem> navigationItems = new List<NavigationItem>();
+        private static List<SubmenuItem> submenuItems = new List<SubmenuItem>();
+        private static string path = TestData.ExcelPath;
+        private static int startRows = Convert.ToInt16(TestData.startRows);
+        private static int startColumns = Convert.ToInt16(TestData.startColumns);
 
         public static List<string> GetNamesOfJournals()
         {
@@ -30,6 +30,8 @@ namespace HW2
 
         public static List<NavigationItem> GetNavigationItems(string nameOfJournal)
         {
+            excelApp = new Excel.Application();
+            wb = excelApp.Workbooks.Open(path);
             Excel.Worksheet ws = (Microsoft.Office.Interop.Excel.Worksheet)wb.Worksheets[nameOfJournal];
             for (int columns = startColumns; columns <= ws.Columns.Count; columns++)
             {
@@ -37,7 +39,7 @@ namespace HW2
                 navigationItem.name = GetValue(startRows, columns, ws);
                 if (navigationItem.name != "")
                 {
-                    for (int i = startRows + 1; i <= ws.Rows.Count; i++)
+                    for (int i = Convert.ToInt16(startRows) + 1; i <= ws.Rows.Count; i++)
                     {
                         SubmenuItem submenuItem = new SubmenuItem();
                         submenuItem.name = GetValue(i, columns, ws);
@@ -65,6 +67,12 @@ namespace HW2
             Excel.Range cell = (Excel.Range)ws.Cells[row, col];
             return Convert.ToString(cell.Value);
 
+        }
+
+        public static void ExcelKill()
+        {
+            excelApp.Quit();
+            excelApp = null;
         }
     }
 }
