@@ -7,7 +7,7 @@ using OpenQA.Selenium;
 
 namespace HW2
 {
-    class Steps
+    public class Steps
     {
         static IWebDriver driver { get { return WebDriver.Driver; } }
         static JournalPage page;

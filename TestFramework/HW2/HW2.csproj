@@ -31,9 +31,26 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Dsx.Test.MsNuGetTest, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Dsx.Test.MsNuGetTest.1.0.0.0\lib\net45\Microsoft.Dsx.Test.MsNuGetTest.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Utilities, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.Utilities.14.3.25407\lib\net45\Microsoft.VisualStudio.Utilities.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.VisualStudio, Version=3.5.0.1996, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.VisualStudio.3.5.0\lib\net45\NuGet.VisualStudio.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="Microsoft.Office.Interop.Excel">
       <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="TestToolsToXunitProxy, Version=0.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TestToolsToXunitProxy.0.0.3\lib\net45\TestToolsToXunitProxy.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="WebDriver">
       <HintPath>..\packages\Selenium.WebDriver.3.0.1\lib\net40\WebDriver.dll</HintPath>
@@ -47,6 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MethodsMSTests.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ExcelParser.cs" />
@@ -65,7 +83,7 @@
     <Compile Include="Journal.cs" />
     <Compile Include="JournalPage.cs" />
     <Compile Include="FillJournal.cs" />
-    <Compile Include="MethodsTests.cs" />
+    <Compile Include="MethodsNUnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
