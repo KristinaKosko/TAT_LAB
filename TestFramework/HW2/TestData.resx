@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="chromaDriverPath" xml:space="preserve">
+  <data name="chromDriverPath" xml:space="preserve">
     <value>C:\Users\Krystsina_Kasko\Desktop\TAT_LAB-TestJournalFramework\TestFramework\HW2\bin\Debug</value>
   </data>
   <data name="ExcelPath" xml:space="preserve">
@@ -128,5 +128,17 @@
   </data>
   <data name="startRows" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="d" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FFDriverPath" xml:space="preserve">
+    <value>C:\Users\Krystsina_Kasko\TAT_LAB\TestFramework\packages\FireFoxDriver</value>
+  </data>
+  <data name="IEDriverPath" xml:space="preserve">
+    <value>C:\Users\Krystsina_Kasko\TAT_LAB\TestFramework\packages\IEDriver</value>
+  </data>
+  <data name="browser" xml:space="preserve">
+    <value>chromedriver</value>
   </data>
 </root>

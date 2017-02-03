@@ -2,7 +2,7 @@
 
 namespace HW2
 {
-    [TestClass]
+    [TestClass]   
     public class LoginPageTests
     {
         [TestMethod]

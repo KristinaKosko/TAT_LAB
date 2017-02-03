@@ -16,7 +16,7 @@ namespace HW2
 			{
 				if (driver == null)
 				{
-					driver = new ChromeDriver(TestData.chromaDriverPath);
+					driver = WebDriverGetter.GetWebDriver(TestData.browser);
 					driver.Manage().Window.Maximize();
 				}
 

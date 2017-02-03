@@ -61,11 +61,29 @@ namespace HW2 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to chromedriver.
+        /// </summary>
+        internal static string browser {
+            get {
+                return ResourceManager.GetString("browser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to C:\Users\Krystsina_Kasko\Desktop\TAT_LAB-TestJournalFramework\TestFramework\HW2\bin\Debug.
         /// </summary>
-        internal static string chromaDriverPath {
+        internal static string chromDriverPath {
             get {
-                return ResourceManager.GetString("chromaDriverPath", resourceCulture);
+                return ResourceManager.GetString("chromDriverPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string d {
+            get {
+                return ResourceManager.GetString("d", resourceCulture);
             }
         }
         
@@ -75,6 +93,24 @@ namespace HW2 {
         internal static string ExcelPath {
             get {
                 return ResourceManager.GetString("ExcelPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C:\Users\Krystsina_Kasko\TAT_LAB\TestFramework\packages\FireFoxDriver.
+        /// </summary>
+        internal static string FFDriverPath {
+            get {
+                return ResourceManager.GetString("FFDriverPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C:\Users\Krystsina_Kasko\TAT_LAB\TestFramework\packages\IEDriver.
+        /// </summary>
+        internal static string IEDriverPath {
+            get {
+                return ResourceManager.GetString("IEDriverPath", resourceCulture);
             }
         }
         
