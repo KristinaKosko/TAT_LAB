@@ -6,7 +6,7 @@ namespace HW2
     public class LoginPageTests
     {
         [TestMethod]
-        public void LOginPAgeTest()
+        public void LoginPageTest()
         {
             var loginPage = new LoginPage();
             loginPage.NavigateHere();

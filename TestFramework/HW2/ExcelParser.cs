@@ -5,15 +5,15 @@ namespace HW2
 {
     public class ExcelParser
     {
-        private static Excel.Application excelApp;
-        private static Excel.Workbook wb;
-        private static Excel.Sheets worksheets;
-        private static List<string> namesOfJournals;
-        private static List<NavigationItem> navigationItems = new List<NavigationItem>();
-        private static List<SubmenuItem> submenuItems = new List<SubmenuItem>();
-        private static string path = TestData.ExcelPath;
-        private static int startRows = Convert.ToInt16(TestData.startRows);
-        private static int startColumns = Convert.ToInt16(TestData.startColumns);
+        public static Excel.Application excelApp;
+        public static Excel.Workbook wb;
+        public static Excel.Sheets worksheets;
+        public static List<string> namesOfJournals;
+        public static List<NavigationItem> navigationItems = new List<NavigationItem>();
+        public static List<SubmenuItem> submenuItems = new List<SubmenuItem>();
+        public static string path = TestData.ExcelPath;
+        public static int startRows = Convert.ToInt16(TestData.startRows);
+        public static int startColumns = Convert.ToInt16(TestData.startColumns);
 
         public static List<string> GetNamesOfJournals()
         {
