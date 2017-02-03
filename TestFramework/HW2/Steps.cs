@@ -10,7 +10,6 @@ namespace HW2
     public class Steps
     {
         static IWebDriver driver { get { return WebDriver.Driver; } }
-        static JournalPage page;
 
         public static void OpenJournal(string nameOfJournal)
         {
