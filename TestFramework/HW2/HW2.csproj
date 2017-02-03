@@ -64,7 +64,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MethodsMSTests.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ExcelParser.cs" />
@@ -83,7 +82,6 @@
     <Compile Include="Journal.cs" />
     <Compile Include="JournalPage.cs" />
     <Compile Include="FillJournal.cs" />
-    <Compile Include="MethodsNUnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

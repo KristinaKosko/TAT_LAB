@@ -2,18 +2,17 @@
 using NUnit.Framework;
 using System.Diagnostics;
 using System.Collections.Generic;
-using HW2;
 
-namespace HW2Tests
+namespace HW2
 {
     [TestFixture]
-	public class ExcelParserNUnitTests
-	{
-        static List<string> names { get {return ExcelParser.GetNamesOfJournals(); } }
+    public class JournalNUnitTests
+    {
+        static List<string> names { get { return ExcelParser.GetNamesOfJournals(); } }
         [Test]
         [TestCaseSource("names")]
-		public void MethodTests(string journal)
-		{
+        public void MethodTests(string journal)
+        {
             Steps.OpenJournal(journal);
             List<NavigationItem> naviItems = ExcelParser.GetNavigationItems(journal);
             ExcelParser.ExcelKill();
@@ -21,16 +20,16 @@ namespace HW2Tests
             {
                 Assert.True(Steps.CheckItems(naviItem));
             }
-		}
+        }
 
         [OneTimeTearDown]
         public void EndTest()
         {
             Steps.End();
             //foreach (var p in Process.GetProcessesByName("Excel"))
-              //  p.Kill();
-           // foreach (var p in Process.GetProcessesByName("ChromeDriver"))
-             //   p.Kill();
+            //  p.Kill();
+            // foreach (var p in Process.GetProcessesByName("ChromeDriver"))
+            //   p.Kill();
         }
-	}
+    }
 }
