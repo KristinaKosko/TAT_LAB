@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace HW2
 {
-	public class JournalsFiller
+	public static class JournalsFiller
 	{
-		public List<Journal> FillJournal(Journal journal, int index, int amount)
+		public static List<Journal> FillJournal(Journal journal, int index, int amount)
 		{
 			List<Journal> journals = new List<Journal>();
 			List<string> namesOfJournals = ExcelParser.namesOfJournals;
