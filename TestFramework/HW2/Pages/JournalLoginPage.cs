@@ -7,13 +7,13 @@ using OpenQA.Selenium;
 
 namespace HW2
 {
-    public class LoginPage
-    {
+    class JournalLoginPage {
         public IWebElement LoginInput { get { return WebDriver.Driver.FindElement(By.XPath("//*[contains(@id, 'txt_UserName')]")); } }
         public IWebElement PasswordInput { get { return WebDriver.Driver.FindElement(By.XPath("//*[contains(@id, 'txt_Password')]")); } }
         public IWebElement LoginButton { get { return WebDriver.Driver.FindElement(By.XPath("//*[contains(@id, 'LoginButton')]")); } }
+        public IWebElement LoginField { get { return WebDriver.Driver.FindElement(By.XPath("//a[text()='Login']")); } }
 
-        public LoginPage()
+        public JournalLoginPage()
         {
 
         }
@@ -25,9 +25,9 @@ namespace HW2
             LoginButton.Click();
         }
 
-        public void NavigateHere()
+        public void GoToLogin()
         {
-            WebDriver.Driver.Navigate().GoToUrl("http://journals.lww.com/pages/default.aspx");
+            LoginField.Click();
         }
     }
 }

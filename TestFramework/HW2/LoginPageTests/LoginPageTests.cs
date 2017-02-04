@@ -1,23 +1,23 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 
 namespace HW2
 {
-    [TestClass]   
-    public class LoginPageTests
-    {
-        [TestMethod]
-        public void LoginPageTest()
+        [TestFixture]
+        public class LoginPageTests
         {
-            var loginPage = new LoginPage();
-            loginPage.NavigateHere();
-            loginPage.Login("avkozlov_by", "Minsk2017");
-        }
+            [Test]
+            public void LoginPageTest()
+            {
+                var loginPage = new LoginPage();
+                loginPage.NavigateHere();
+                loginPage.Login("avkozlov_by", "Minsk2017");
+            }
 
-        [ClassCleanup]
-        public static void Cleanup()
-        {
-            WebDriver.KillDriver();
+            [OneTimeTearDown]
+            public static void Cleanup()
+            {
+                WebDriver.KillDriver();
+            }
         }
-    }
 }
 
