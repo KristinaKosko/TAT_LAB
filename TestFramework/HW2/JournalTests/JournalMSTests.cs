@@ -10,7 +10,7 @@ namespace HW2
     [TestClass()]
     public class JournalMSTests
     {
-        static List<string> names { get { return ExcelParser.GetNamesOfJournals(); } }
+        static List<string> names { get { return DataWorker.GetNamesOfJournals(); } }
 
         [TestMethod()]
         [DeploymentItem("TestFramework\\Responsive-Batch-4.xlsx")]
@@ -18,8 +18,8 @@ namespace HW2
         public void JournalTests(string journal)
         {
             Steps.OpenJournal(journal);
-            List<NavigationItem> naviItems = ExcelParser.GetNavigationItems(journal);
-            ExcelParser.ExcelKill();
+            List<NavigationItem> naviItems = DataWorker.GetNavigationItems(journal);
+            DataWorker.ExcelKill();
             foreach (var naviItem in naviItems)
             {
                 Assert.IsTrue(Steps.CheckItems(naviItem));

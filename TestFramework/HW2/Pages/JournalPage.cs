@@ -9,6 +9,7 @@ namespace HW2
 	{
         By category = By.ClassName("dropdown-toggle");
         By item = By.ClassName("menu-item-text");
+        By article = By.XPath("a/@title");
 
         public IWebElement GetCategory(string categoryName)
         {
@@ -42,5 +43,15 @@ namespace HW2
             return null;
         }
 
+        public List<string> GetJournalArticlesNames()
+        {
+            List<IWebElement> articles = WebDriver.Driver.FindElements(article).ToList();
+            List<string> articlesNames = new List<string>();
+            foreach (var article in articles)
+            {
+                articlesNames.Add(article.GetAttribute("title"));
+            }
+            return articlesNames;
+        }
     }
 }

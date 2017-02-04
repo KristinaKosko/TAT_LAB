@@ -141,4 +141,7 @@
   <data name="browser" xml:space="preserve">
     <value>chromedriver</value>
   </data>
+  <data name="HomePageURL" xml:space="preserve">
+    <value>http://journals.lww.com/pages/default.aspx</value>
+  </data>
 </root>

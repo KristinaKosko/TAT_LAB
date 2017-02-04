@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Excel = Microsoft.Office.Interop.Excel;
 namespace HW2
 {
-    public class ExcelParser
+    public class DataWorker
     {
         public static Excel.Application excelApp;
         public static Excel.Workbook wb;

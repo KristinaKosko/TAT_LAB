@@ -106,6 +106,15 @@ namespace HW2 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to http://journals.lww.com/pages/default.aspx.
+        /// </summary>
+        internal static string HomePageURL {
+            get {
+                return ResourceManager.GetString("HomePageURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to C:\Users\Krystsina_Kasko\TAT_LAB\TestFramework\packages\IEDriver.
         /// </summary>
         internal static string IEDriverPath {

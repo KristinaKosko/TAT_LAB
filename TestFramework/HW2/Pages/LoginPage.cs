@@ -27,7 +27,7 @@ namespace HW2
 
         public void NavigateHere()
         {
-            WebDriver.Driver.Navigate().GoToUrl("http://journals.lww.com/pages/default.aspx");
+            WebDriver.Driver.Navigate().GoToUrl(TestData.HomePageURL);
         }
     }
 }
