@@ -22,7 +22,7 @@ namespace HW2 {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class TestData {
+    public class TestData {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace HW2 {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("HW2.TestData", typeof(TestData).Assembly);
@@ -51,7 +51,7 @@ namespace HW2 {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,9 +61,18 @@ namespace HW2 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 4.
+        /// </summary>
+        public static string BatchNumber {
+            get {
+                return ResourceManager.GetString("BatchNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to chromedriver.
         /// </summary>
-        internal static string browser {
+        public static string browser {
             get {
                 return ResourceManager.GetString("browser", resourceCulture);
             }
@@ -72,7 +81,7 @@ namespace HW2 {
         /// <summary>
         ///   Looks up a localized string similar to C:\Users\Krystsina_Kasko\Desktop\TAT_LAB-TestJournalFramework\TestFramework\HW2\bin\Debug.
         /// </summary>
-        internal static string chromDriverPath {
+        public static string chromDriverPath {
             get {
                 return ResourceManager.GetString("chromDriverPath", resourceCulture);
             }
@@ -81,16 +90,16 @@ namespace HW2 {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string d {
+        public static string d {
             get {
                 return ResourceManager.GetString("d", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to C:\Users\Krystsina_Kasko\Desktop\TAT_LAB-TestJournalFramework\TestFramework\Responsive-Batch-4.xlsx.
+        ///   Looks up a localized string similar to C:\Users\Krystsina_Kasko\Desktop\TAT_LAB-TestJournalFramework\TestFramework\.
         /// </summary>
-        internal static string ExcelPath {
+        public static string ExcelPath {
             get {
                 return ResourceManager.GetString("ExcelPath", resourceCulture);
             }
@@ -99,16 +108,25 @@ namespace HW2 {
         /// <summary>
         ///   Looks up a localized string similar to C:\Users\Krystsina_Kasko\TAT_LAB\TestFramework\packages\FireFoxDriver.
         /// </summary>
-        internal static string FFDriverPath {
+        public static string FFDriverPath {
             get {
                 return ResourceManager.GetString("FFDriverPath", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Responsive-Batch-.
+        /// </summary>
+        public static string FileName {
+            get {
+                return ResourceManager.GetString("FileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://journals.lww.com/pages/default.aspx.
         /// </summary>
-        internal static string HomePageURL {
+        public static string HomePageURL {
             get {
                 return ResourceManager.GetString("HomePageURL", resourceCulture);
             }
@@ -117,7 +135,7 @@ namespace HW2 {
         /// <summary>
         ///   Looks up a localized string similar to C:\Users\Krystsina_Kasko\TAT_LAB\TestFramework\packages\IEDriver.
         /// </summary>
-        internal static string IEDriverPath {
+        public static string IEDriverPath {
             get {
                 return ResourceManager.GetString("IEDriverPath", resourceCulture);
             }
@@ -126,7 +144,7 @@ namespace HW2 {
         /// <summary>
         ///   Looks up a localized string similar to 1.
         /// </summary>
-        internal static string startColumns {
+        public static string startColumns {
             get {
                 return ResourceManager.GetString("startColumns", resourceCulture);
             }
@@ -135,7 +153,7 @@ namespace HW2 {
         /// <summary>
         ///   Looks up a localized string similar to 2.
         /// </summary>
-        internal static string startRows {
+        public static string startRows {
             get {
                 return ResourceManager.GetString("startRows", resourceCulture);
             }

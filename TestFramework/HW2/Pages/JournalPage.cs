@@ -9,7 +9,7 @@ namespace HW2
 	{
         By category = By.ClassName("dropdown-toggle");
         By item = By.ClassName("menu-item-text");
-        By article = By.XPath("a/@title");
+        By article = By.XPath("//*[a(@title)]");
 
         public IWebElement GetCategory(string categoryName)
         {
