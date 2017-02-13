@@ -1,0 +1,9 @@
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\XMLToLinq\XMLToLinqTests\bin\Debug\XMLToLinqTests.dll
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\XMLToLinq\XMLToLinqTests\bin\Debug\XMLToLinqTests.pdb
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\XMLToLinq\XMLToLinqTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\XMLToLinq\XMLToLinqTests\bin\Debug\XMLToLinq.dll
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\XMLToLinq\XMLToLinqTests\bin\Debug\System.Xml.Linq.dll
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\XMLToLinq\XMLToLinqTests\bin\Debug\XMLToLinq.pdb
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\XMLToLinq\XMLToLinqTests\obj\Debug\XMLToLinqTests.csprojResolveAssemblyReference.cache
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\XMLToLinq\XMLToLinqTests\obj\Debug\XMLToLinqTests.dll
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\XMLToLinq\XMLToLinqTests\obj\Debug\XMLToLinqTests.pdb

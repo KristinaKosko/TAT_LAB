@@ -1,0 +1,8 @@
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\XMLToLinq\XMLToLinq\bin\Debug\XMLToLinq.dll
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\XMLToLinq\XMLToLinq\bin\Debug\XMLToLinq.pdb
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\XMLToLinq\XMLToLinq\bin\Debug\System.Xml.Linq.dll
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\XMLToLinq\XMLToLinq\obj\Debug\XMLToLinq.csprojResolveAssemblyReference.cache
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\XMLToLinq\XMLToLinq\obj\Debug\XMLToLinq.TestData.resources
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\XMLToLinq\XMLToLinq\obj\Debug\XMLToLinq.csproj.GenerateResource.Cache
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\XMLToLinq\XMLToLinq\obj\Debug\XMLToLinq.dll
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\XMLToLinq\XMLToLinq\obj\Debug\XMLToLinq.pdb
