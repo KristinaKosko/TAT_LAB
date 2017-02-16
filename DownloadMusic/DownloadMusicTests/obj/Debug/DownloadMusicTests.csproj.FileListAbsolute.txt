@@ -1,0 +1,14 @@
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusicTests\bin\Debug\chromedriver.exe
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusicTests\bin\Debug\chromedriver-license.txt
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusicTests\bin\Debug\DownloadMusicTests.dll
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusicTests\bin\Debug\DownloadMusicTests.pdb
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusicTests\bin\Debug\DownloadMusic.dll
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusicTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusicTests\bin\Debug\WebDriver.dll
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusicTests\bin\Debug\DownloadMusic.pdb
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusicTests\bin\Debug\WebDriver.xml
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusicTests\obj\Debug\DownloadMusicTests.csprojResolveAssemblyReference.cache
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusicTests\obj\Debug\DownloadMusicTests.dll
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusicTests\obj\Debug\DownloadMusicTests.pdb
+C:\Users\Krystsina_Kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusicTests\bin\Debug\WebDriver.Support.dll
+C:\Users\Krystsina_Kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusicTests\bin\Debug\WebDriver.Support.xml

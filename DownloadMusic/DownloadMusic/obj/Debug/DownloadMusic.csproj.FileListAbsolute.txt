@@ -1,0 +1,13 @@
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusic\bin\Debug\chromedriver.exe
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusic\bin\Debug\chromedriver-license.txt
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusic\bin\Debug\DownloadMusic.dll
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusic\bin\Debug\DownloadMusic.pdb
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusic\bin\Debug\WebDriver.dll
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusic\bin\Debug\WebDriver.xml
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusic\obj\Debug\DownloadMusic.csprojResolveAssemblyReference.cache
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusic\obj\Debug\DownloadMusic.Data.resources
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusic\obj\Debug\DownloadMusic.csproj.GenerateResource.Cache
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusic\obj\Debug\DownloadMusic.dll
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusic\obj\Debug\DownloadMusic.pdb
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusic\bin\Debug\WebDriver.Support.dll
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\DownloadMusic\DownloadMusic\bin\Debug\WebDriver.Support.xml
