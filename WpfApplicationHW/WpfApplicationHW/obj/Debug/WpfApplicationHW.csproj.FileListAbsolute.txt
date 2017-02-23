@@ -1,0 +1,14 @@
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\bin\Debug\WpfApplicationHW.exe.config
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\bin\Debug\WpfApplicationHW.exe
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\bin\Debug\WpfApplicationHW.pdb
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\obj\Debug\WpfApplicationHW.csprojResolveAssemblyReference.cache
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\obj\Debug\MainWindow.g.cs
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\obj\Debug\App.g.cs
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\obj\Debug\WpfApplicationHW_MarkupCompile.cache
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\obj\Debug\WpfApplicationHW_MarkupCompile.lref
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\obj\Debug\MainWindow.baml
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\obj\Debug\WpfApplicationHW.g.resources
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\obj\Debug\WpfApplicationHW.Properties.Resources.resources
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\obj\Debug\WpfApplicationHW.csproj.GenerateResource.Cache
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\obj\Debug\WpfApplicationHW.exe
+c:\users\krystsina_kasko\documents\visual studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\obj\Debug\WpfApplicationHW.pdb
