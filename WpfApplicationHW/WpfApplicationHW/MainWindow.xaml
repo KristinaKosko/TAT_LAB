@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplicationHW"
         mc:Ignorable="d"
-        Title="Explore Dlls" Height="500.792" Width="700.176" ResizeMode="NoResize">
+        Title="Choose Folder Which Includes Dlls" Height="500.792" Width="700.176" ResizeMode="NoResize">
     <Grid RenderTransformOrigin="0.5,0.5">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="239*"/>
+            <ColumnDefinition Width="108*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <Grid.LayoutTransform>
@@ -22,15 +23,15 @@
                 <TranslateTransform/>
             </TransformGroup>
         </Grid.RenderTransform>
-        <Button x:Name="button" Content="Browse" HorizontalAlignment="Left" Margin="559,10,0,0" VerticalAlignment="Top" Width="96" Height="26" Click="button_Click"/>
-        <TextBox x:Name="selectFolder" HorizontalAlignment="Left" Height="26" Margin="24,10,0,0" TextWrapping="Wrap" Text="Select folder..." VerticalAlignment="Top" Width="493" Background="White" FontSize="14" FontStyle="Italic" TextDecorations="{x:Null}" Foreground="#FFB0B0B0"/>
+        <Button x:Name="button" Content="Browse" HorizontalAlignment="Left" Margin="81.169,10,0,0" VerticalAlignment="Top" Width="96" Height="26" Click="button_Click" Grid.Column="1"/>
+        <TextBox x:Name="selectFolder" Margin="24,12,0,0" TextWrapping="Wrap" Text="Select folder..." Width="493" Background="White" FontSize="14" FontStyle="Italic" TextDecorations="{x:Null}" Foreground="#FFB0B0B0" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" Height="24"/>
         <TextBox x:Name="dllExplorer" HorizontalAlignment="Left" Height="21" Margin="24,426,0,0" TextWrapping="Wrap" Text="DLL Explorer" VerticalAlignment="Top" Width="180" IsEnabled="False" FontWeight="Bold" FontSize="13" TextAlignment="Center"/>
         <TextBox x:Name="classesOfDll" HorizontalAlignment="Left" Height="21" Margin="248,426,0,0" TextWrapping="Wrap" Text="Classes of Dll" VerticalAlignment="Top" Width="193" IsEnabled="False" FontSize="13" FontWeight="Bold" TextAlignment="Center"/>
-        <TextBox x:Name="Methods" HorizontalAlignment="Left" Height="21" Margin="483,426,0,0" TextWrapping="Wrap" Text="Methods" VerticalAlignment="Top" Width="183" IsEnabled="False" FontSize="13" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBox x:Name="Content" HorizontalAlignment="Left" Height="21" Margin="5.169,426,0,0" TextWrapping="Wrap" Text="Content Of Class" VerticalAlignment="Top" Width="183" IsEnabled="False" FontSize="13" FontWeight="Bold" TextAlignment="Center" Grid.Column="1"/>
         <ListBox x:Name="dlls" HorizontalAlignment="Left" Height="306" Margin="24,89,0,0" VerticalAlignment="Top" Width="180" SelectionChanged="dlls_SelectionChanged"/>
         <ListBox x:Name="classes" HorizontalAlignment="Left" Height="306" Margin="248,89,0,0" VerticalAlignment="Top" Width="193" SelectionChanged="classes_SelectionChanged"/>
-        <ListBox x:Name="methods" HorizontalAlignment="Left" Height="306" Margin="483,89,0,0" VerticalAlignment="Top" Width="183"/>
-        <ComboBox x:Name="chooseProperties" HorizontalAlignment="Left" Margin="559,51,0,0" VerticalAlignment="Top" Width="96" Height="22" SelectionChanged="chooseProperties_SelectionChanged">
+        <ListBox x:Name="methods" HorizontalAlignment="Left" Height="306" Margin="5.169,89,0,0" VerticalAlignment="Top" Width="183" Grid.Column="1"/>
+        <ComboBox x:Name="chooseProperties" HorizontalAlignment="Left" Margin="81.169,51,0,0" VerticalAlignment="Top" Width="96" Height="22" SelectionChanged="chooseProperties_SelectionChanged" Grid.Column="1">
             <ComboBoxItem Content="All" IsSelected="True"/>
             <ComboBoxItem Content="Fields"/>
             <ComboBoxItem Content="Properties"/>

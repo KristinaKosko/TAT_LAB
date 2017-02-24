@@ -12,3 +12,12 @@ c:\users\krystsina_kasko\documents\visual studio 2015\Projects\WpfApplicationHW\
 c:\users\krystsina_kasko\documents\visual studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\obj\Debug\WpfApplicationHW.csproj.GenerateResource.Cache
 c:\users\krystsina_kasko\documents\visual studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\obj\Debug\WpfApplicationHW.exe
 c:\users\krystsina_kasko\documents\visual studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\obj\Debug\WpfApplicationHW.pdb
+C:\Users\Krystsina_Kasko\Documents\Visual Studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\bin\Debug\JetBrains.Annotations.dll
+C:\Users\Krystsina_Kasko\Documents\Visual Studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\bin\Debug\MvvmTools.dll
+C:\Users\Krystsina_Kasko\Documents\Visual Studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\Krystsina_Kasko\Documents\Visual Studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\bin\Debug\JetBrains.Annotations.xml
+C:\Users\Krystsina_Kasko\Documents\Visual Studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\Krystsina_Kasko\Documents\Visual Studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Krystsina_Kasko\Documents\Visual Studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Krystsina_Kasko\Documents\Visual Studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\bin\Debug\Microsoft.WindowsAPICodePack.pdb
+C:\Users\Krystsina_Kasko\Documents\Visual Studio 2015\Projects\WpfApplicationHW\WpfApplicationHW\bin\Debug\Microsoft.WindowsAPICodePack.Shell.pdb

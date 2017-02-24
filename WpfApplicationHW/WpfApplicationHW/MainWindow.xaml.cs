@@ -1,22 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Reflection;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Windows.Interop;
+using Microsoft.WindowsAPICodePack.Dialogs;
+using System.Collections.Generic;
 
 namespace WpfApplicationHW
 {
@@ -26,7 +17,6 @@ namespace WpfApplicationHW
     public partial class MainWindow : Window
     {
         private string selectedPath;
-        private string pathToDll;
 
         [DllImport("user32.dll")]
         private static extern int GetWindowLong(IntPtr hWnd, int nIndex);
@@ -61,79 +51,134 @@ namespace WpfApplicationHW
             SetWindowLong(_windowHandle, GWL_STYLE, GetWindowLong(_windowHandle, GWL_STYLE) & ~WS_MAXIMIZEBOX & ~WS_MINIMIZEBOX);
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private CommonOpenFileDialog GetFolderBrowserDialog()
         {
-            using (var fbd = new FolderBrowserDialog())
+            var dlg = new CommonOpenFileDialog
             {
-                DialogResult result = fbd.ShowDialog();
-                
-                if (result == System.Windows.Forms.DialogResult.OK)
-                {
-                    selectedPath = fbd.SelectedPath;
-                    selectFolder.Text = selectedPath;
-                    var files = Directory.GetFiles(fbd.SelectedPath, "*.dll");
-                    dlls.IsEnabled = true;
-                    dlls.Items.Clear();
-                    foreach (var file in files)
-                    {                        
-                        FileInfo f = new FileInfo(file);
-                        dlls.Items.Add(f.Name);
-                    }
-                }
-            }
+                Title = "Choose Folder Which Includes Dlls",
+                IsFolderPicker = true,
+                AddToMostRecentlyUsedList = false,
+                AllowNonFileSystemItems = false,
+                EnsureFileExists = true,
+                EnsurePathExists = true,
+                EnsureReadOnly = false,
+                EnsureValidNames = true,
+                Multiselect = false,
+                ShowPlacesList = true
+            };
+
+            return dlg;
         }
 
-        public void GetClassesOfDll(System.Windows.Controls.ListBox listBox)
+        private void AddDllsFromFolder(string directory)
         {
-            string dllName = null;
-            dllName = listBox.SelectedItem.ToString();
-            pathToDll = $"{selectedPath}\\{dllName}";
-            Assembly assembly;
-            Type[] classesOfDll;
+            selectFolder.Text = directory;
+            dlls.IsEnabled = true;
+            dlls.Items.Clear();
             try
             {
-                assembly = Assembly.LoadFile(pathToDll);
-                classesOfDll = assembly.GetTypes();
-                classes.IsEnabled = true;
-                classes.Items.Clear();
-                foreach (Type type in classesOfDll)
+                var files = Directory.GetFiles(directory, "*.dll");
+                foreach (var file in files)
                 {
-                    if (type.IsClass)
-                    {
-                        classes.Items.Add(type);
-                    }
+                    FileInfo f = new FileInfo(file);
+                    dlls.Items.Add(f.Name);
                 }
             }
             catch
             {
-                assembly = null;
-                classesOfDll = null;
-                classes.Items.Clear();
-                classes.IsEnabled = false;
-                methods.IsEnabled = false;
-                classes.Items.Add("Couldn't load the .DLL");
+                dlls.Items.Add("");
             }
         }
 
-        public void GetMethodsOfDll(System.Windows.Controls.ListBox listBox, bool addMore)
+        private void button_Click(object sender, RoutedEventArgs e)
         {
-            if (!addMore) methods.Items.Clear();
-            var lbType = (Type)listBox.SelectedItem;
-            var methodsOfClass = lbType.GetMethods();
-            foreach (MethodInfo type in methodsOfClass)
+            using (var fbd = new FolderBrowserDialog())
             {
-                if (type.IsPublic)
+                var dlg = GetFolderBrowserDialog();
+                if (dlg.ShowDialog() != CommonFileDialogResult.Ok) return;
+                selectedPath = dlg.FileName;
+                AddDllsFromFolder(selectedPath);
+            }
+        }
+
+        private IEnumerable<Type> GetTypes(string dllPath)
+        {
+            var dll = Assembly.LoadFile(dllPath);
+            IEnumerable<Type> types;
+            try
+            {
+                types = dll.GetTypes();
+            }
+            catch (Exception)
+            {
+                types = new List<Type>();
+            }
+
+            return types;
+        }
+
+        private void GetClassesOfDll(System.Windows.Controls.ListBox listBox)
+        {
+            string dllName = listBox.SelectedItem.ToString();
+            string pathToDll = $"{selectedPath}\\{dllName}";
+            var classesOfDll = GetTypes(pathToDll);
+            classes.Items.Clear();
+            foreach (Type type in classesOfDll)
+            {
+                if (type.IsClass)
                 {
-                    methods.Items.Add(type);
+                    classes.Items.Add(type);
                 }
             }
         }
 
-        public void GetFieldsOfDll(System.Windows.Controls.ListBox listBox, bool addMore)
+        private IEnumerable<MethodInfo> GetMethods(Type type)
+        {
+            IEnumerable<MethodInfo> methods;
+            try
+            {
+                methods = type.GetMethods();
+            }
+            catch
+            {
+                methods = new MethodInfo[0];
+            }
+            return methods;
+        }
+
+        private void GetMethodsOfDll(System.Windows.Controls.ListBox listBox, bool addMore)
         {
             if (!addMore) methods.Items.Clear();
             var lbType = (Type)listBox.SelectedItem;
-            var fieldsOfClass = lbType.GetFields();
+            var methodsOfClass = GetMethods(lbType);
+            foreach (MethodInfo method in methodsOfClass)
+            {
+                if (method.IsPublic)
+                {
+                    methods.Items.Add(method);
+                }
+            }
+        }
+
+        private IEnumerable<FieldInfo> GetFields(Type type)
+        {
+            IEnumerable<FieldInfo> fields;
+            try
+            {
+                fields = type.GetFields();
+            }
+            catch
+            {
+                fields = new FieldInfo[0];
+            }
+            return fields;
+        }
+
+        private void GetFieldsOfDll(System.Windows.Controls.ListBox listBox, bool addMore)
+        {
+            if (!addMore) methods.Items.Clear();
+            var lbType = (Type)listBox.SelectedItem;
+            var fieldsOfClass = GetFields(lbType);
             foreach (FieldInfo type in fieldsOfClass)
             {
                 if (type.IsPublic)
@@ -143,38 +188,61 @@ namespace WpfApplicationHW
             }
         }
 
-        public void GetPropertiesOfDll(System.Windows.Controls.ListBox listBox, bool addMore)
+        private IEnumerable<PropertyInfo> GetProperties(Type type)
+        {
+            IEnumerable<PropertyInfo> properties;
+            try
+            {
+                properties = type.GetProperties();
+            }
+            catch
+            {
+                properties = new PropertyInfo[0];
+            }
+            return properties;
+        }
+
+        private void GetPropertiesOfDll(System.Windows.Controls.ListBox listBox, bool addMore)
         {
             if (!addMore) methods.Items.Clear();
             var lbType = (Type)listBox.SelectedItem;
-            var propertiesOfClass = lbType.GetProperties();
-            
+            var propertiesOfClass = GetProperties(lbType);
             foreach (PropertyInfo type in propertiesOfClass)
             {
                 methods.Items.Add(type);
             }
         }
-        
-        private void chooseProperties_SelectionChanged(object sender, SelectionChangedEventArgs e)
+
+        private void GetDllContetntOfSelectedType(string selectedType)
         {
-            methods.IsEnabled = true;
-            switch (chooseProperties.Text)
+            switch (selectedType)
             {
                 case "Methods":
                     GetMethodsOfDll(classes, false);
+                    Content.Text = "Methods";
                     break;
                 case "Properties":
                     GetPropertiesOfDll(classes, false);
+                    Content.Text = "Properties";
                     break;
                 case "Fields":
                     GetFieldsOfDll(classes, false);
+                    Content.Text = "Fields";
                     break;
                 case "All":
                     GetMethodsOfDll(classes, false);
                     GetPropertiesOfDll(classes, true);
                     GetFieldsOfDll(classes, true);
+                    Content.Text = "All Content";
                     break;
             }
+        }
+
+        private void chooseProperties_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (classes.Items.Count == 0) return;
+            var selectedFilter = ((ComboBoxItem)(e.AddedItems[0])).Content.ToString();
+            GetDllContetntOfSelectedType(selectedFilter);
         }
 
         private void dlls_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -185,8 +253,10 @@ namespace WpfApplicationHW
 
         private void classes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            methods.IsEnabled = true;
             GetMethodsOfDll(classes, false);
+            GetPropertiesOfDll(classes, true);
+            GetFieldsOfDll(classes, true);
         }
     }
 }
-
